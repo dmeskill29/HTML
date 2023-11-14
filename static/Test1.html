@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.scrollable-div {
+  height: 200px; 
+  overflow: auto; 
+  color: blue; 
+  font-size: 20px; 
+  font-family: Arial; 
+  font-weight: bold; 
+  text-align: center;
+}
+</style>
+<script>
+window.onload = function() {
+  var div = document.querySelector('.scrollable-div');
+  div.addEventListener('click', function() {
+    alert('Div was clicked!');
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph!</p>
+
+<div class="scrollable-div">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna.</p>
+  <!-- Add more content here -->
+</div>
+
+<form action="/createPage" method="post">
+  <label for="title">Page Title:</label><br>
+  <input type="text" id="title" name="title"><br>
+  <label for="content">Page Content:</label><br>
+  <textarea id="content" name="content"></textarea><br>
+  <input type="submit" value="Create Page">
+</form>
+
+</body>
+</html>
