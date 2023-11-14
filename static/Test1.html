@@ -1,45 +1,100 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-.scrollable-div {
-  height: 200px; 
-  overflow: auto; 
-  color: blue; 
-  font-size: 20px; 
-  font-family: Arial; 
-  font-weight: bold; 
-  text-align: center;
-}
-</style>
-<script>
-window.onload = function() {
-  var div = document.querySelector('.scrollable-div');
-  div.addEventListener('click', function() {
-    alert('Div was clicked!');
-  });
-}
-</script>
-</head>
-<body>
+  <head>
+    <style>
+      body {
+        background-color: lightblue;
+      }
 
-<h1>My First Heading</h1>
+      h1 {
+        color: white;
+        text-align: center;
+      }
 
-<p>My first paragraph!</p>
+      p {
+        font-family: verdana;
+        font-size: 20px;
+        text-align: center;
+      }
 
-<div class="scrollable-div">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna.</p>
-  <!-- Add more content here -->
-</div>
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        background-color: blue;
+        text-decoration: none;
+        border-radius: 15px;
+      }
 
-<form action="/createPage" method="post">
-  <label for="title">Page Title:</label><br>
-  <input type="text" id="title" name="title"><br>
-  <label for="content">Page Content:</label><br>
-  <textarea id="content" name="content"></textarea><br>
-  <input type="submit" value="Create Page">
-</form>
+      a:hover {
+        background-color: darkblue;
+      }
 
-</body>
+      .scrollable-div {
+        height: 200px;
+        overflow: auto;
+        color: blue;
+        font-size: 20px;
+        font-family: Arial;
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid blue;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px;
+      }
+
+      input[type="submit"] {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: darkblue;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var div = document.querySelector(".scrollable-div");
+        div.addEventListener("click", function () {
+          alert("Div was clicked!");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>My First Heading</h1>
+
+    <p>My first paragraph!</p>
+
+    <a href="anotherPage.html">Go to Another Page</a>
+
+    <div class="scrollable-div">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros
+        eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies
+        tristique, enim lectus pretium quam, quis bibendum metus tellus sed
+        magna.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros
+        eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies
+        tristique, enim lectus pretium quam, quis bibendum metus tellus sed
+        magna.
+      </p>
+      <!-- Add more content here -->
+    </div>
+
+    <form action="/createPage" method="post">
+      <label for="title">Page Title:</label><br />
+      <input type="text" id="title" name="title" /><br />
+      <label for="content">Page Content:</label><br />
+      <textarea id="content" name="content"></textarea><br />
+      <input type="submit" value="Create Page" />
+    </form>
+  </body>
 </html>

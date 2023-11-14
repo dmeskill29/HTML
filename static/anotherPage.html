@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.scrollable-div {
+  height: 200px; 
+  overflow: auto; 
+  color: blue; 
+  font-size: 20px; 
+  font-family: Arial; 
+  font-weight: bold; 
+  text-align: center;
+}
+</style>
+<script>
+window.onload = function() {
+  var div = document.querySelector('.scrollable-div');
+  div.addEventListener('click', function() {
+    alert('Div was clicked!');
+  });
+}
+</script>
+</head>
+<body>
+
+<h1>My Second Heading</h1>
+
+<p>My second paragraph!</p>
+
+
+<form action="/createPage" method="post">
+  <label for="title">Page Title:</label><br>
+  <input type="text" id="title" name="title"><br>
+  <label for="content">Page Content:</label><br>
+  <textarea id="content" name="content"></textarea><br>
+  <input type="submit" value="Create Page">
+</form>
+
+</body>
+</html>
