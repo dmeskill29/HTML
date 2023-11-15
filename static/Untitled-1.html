@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #DAE0E6;
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+        .post-title {
+            font-size: 18px;
+            color: #0079d3;
+        }
+        .post-details {
+            font-size: 12px;
+            color: #888;
+        }
+        .post-content {
+            margin-top: 10px;
+        }
+        .vote {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .vote button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #888;
+        }
+        .vote button:disabled {
+            color: #ddd;
+        }
+    </style>
+    <script>
+        function upvote(postId) {
+            var scoreElement = document.getElementById('score-' + postId);
+            var score = parseInt(scoreElement.innerText, 10);
+            scoreElement.innerText = score + 1;
+
+            document.getElementById('upvote-' + postId).disabled = true;
+            document.getElementById('downvote-' + postId).disabled = false;
+        }
+
+        function downvote(postId) {
+            var scoreElement = document.getElementById('score-' + postId);
+            var score = parseInt(scoreElement.innerText, 10);
+            scoreElement.innerText = score - 1;
+
+            document.getElementById('upvote-' + postId).disabled = false;
+            document.getElementById('downvote-' + postId).disabled = true;
+        }
+    </script>
+</head>
+<body>
+    <h1>My Reddit Clone</h1>
+    <div class="post">
+        <div class="vote">
+            <button id="upvote-1" onclick="upvote('1')">↑</button>
+            <div id="score-1">0</div>
+            <button id="downvote-1" onclick="downvote('1')">↓</button>
+        </div>
+        <div>
+            <div class="post-title">Post Title 1</div>
+            <div class="post-details">Posted by User1 1 hour ago</div>
+            <div class="post-content">This is the content of the post.</div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="vote">
+            <button id="upvote-2" onclick="upvote('2')">↑</button>
+            <div id="score-2">0</div>
+            <button id="downvote-2" onclick="downvote('2')">↓</button>
+        </div>
+        <div>
+            <div class="post-title">Post Title 2</div>
+            <div class="post-details">Posted by User2 2 hours ago</div>
+            <div class="post-content">This is another post.</div>
+        </div>
+    </div>
+    <!-- More posts -->
+</body>
+</html>

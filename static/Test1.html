@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
-        background-color: lightblue;
+        background-color: #A7DDCF;
       }
 
       h1 {
         color: white;
         text-align: center;
+        margin-top: 120px;
       }
 
       p {
@@ -21,31 +23,31 @@
         display: inline-block;
         padding: 10px 20px;
         color: white;
-        background-color: blue;
+        background-color: #1A675F;
         text-decoration: none;
         border-radius: 15px;
       }
 
       a:hover {
-        background-color: darkblue;
+        background-color: #82C9B9;
       }
 
       .scrollable-div {
         height: 200px;
         overflow: auto;
-        color: blue;
+        color: #1A675F;
         font-size: 20px;
         font-family: Arial;
         font-weight: bold;
         text-align: center;
-        border: 2px solid blue;
+        border: 2px solid #1A675F;
         border-radius: 15px;
         padding: 20px;
         margin: 10px;
       }
 
       input[type="submit"] {
-        background-color: blue;
+        background-color: #1A675F;
         color: white;
         padding: 10px 20px;
         border: none;
@@ -54,8 +56,25 @@
       }
 
       input[type="submit"]:hover {
-        background-color: darkblue;
+        background-color: #82C9B9;
       }
+      .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            height: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header h1 {
+        margin-top: 0;
+        padding-top: 0;
+        }
     </style>
     <script>
       window.onload = function () {
@@ -67,6 +86,10 @@
     </script>
   </head>
   <body>
+    <div class="header">
+      <img src="SolveSuiteLogo.png" alt="Logo" class="logo">
+      <h1>SolveSuite</h1>
+    </div>
     <h1>My First Heading</h1>
 
     <p>My first paragraph!</p>
